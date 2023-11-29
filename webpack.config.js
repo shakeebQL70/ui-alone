@@ -1,11 +1,11 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const path = require('path')
+const path = require("path");
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => {
   return {
     output: {
-      publicPath: process.env.PUBLIC_PATH,
+      publicPath: "auto",
       filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist"),
       clean: true,
